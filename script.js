@@ -77,18 +77,20 @@ class App extends React.Component {
 
   render() {
     return (
-      React.createElement("div", { className: "container-fluid" },
+      React.createElement("div", { className: "container" },
       React.createElement(Title, null),
-      React.createElement("div", { className: "contain" },
-      React.createElement("div", { className: "left d-inline" },
+      React.createElement("div", { className: "container" },
+      React.createElement("div", { className: "row" },
+      React.createElement("div", { className: "col-lg-6 col-sm-12" },
       React.createElement(Toolbar, { text: " Editor" }),
       React.createElement(Editor, { markdown: this.state.markdown,
         onChange: this.handleChange })),
 
-      React.createElement("div", { className: "right d-inline" },
+      React.createElement("div", { className: "col-lg-6 col-sm-12" },
       React.createElement(Toolbar, { text: " Previewer" }),
       React.createElement("div", { className: "scroller" },
-      React.createElement(Preview, { markdown: this.state.markdown }))))));
+      React.createElement(Preview, { markdown: this.state.markdown })))))));
+
 
 
 

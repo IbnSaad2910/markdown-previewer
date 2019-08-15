@@ -77,18 +77,20 @@ class App extends React.Component {
     
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <Title />
-        <div className="contain">
-          <div className="left d-inline">
-            <Toolbar text=" Editor"/>
-            <Editor markdown={this.state.markdown} 
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-sm-12">
+              <Toolbar text=" Editor"/>
+              <Editor markdown={this.state.markdown} 
             onChange={this.handleChange} />
-          </div>
-          <div className="right d-inline">
-            <Toolbar text=" Previewer"/>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+              <Toolbar text=" Previewer"/>
             <div className="scroller">
               <Preview  markdown={this.state.markdown} />
+            </div>
             </div>
           </div>
         </div>
